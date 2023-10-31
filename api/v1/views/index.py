@@ -18,6 +18,7 @@ def get_status():
 
     return jsonify({"status": "OK"})
 
+
 @app_views.route('/api/v1/stats', methods=['GET'])
 def get_stats():
     """
@@ -31,4 +32,3 @@ def get_stats():
         num_objs[names[i]] = storage.count(classes[i])
 
     return jsonify(num_objs)
-
